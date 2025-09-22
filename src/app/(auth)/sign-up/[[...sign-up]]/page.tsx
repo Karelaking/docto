@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 
 export default function SignUpPage() {
   return (
-    <div className="grid w-full grow items-center px-4 sm:justify-center">
+    <div className="grid w-full h-screen grow items-center px-4 justify-center">
       <SignUp.Root>
         <Clerk.Loading>
           {(isGlobalLoading) => (
@@ -218,7 +218,7 @@ export default function SignUpPage() {
                           asChild
                           resend
                           className="text-muted-foreground"
-                          fallback={({ resendableAfter }) => (
+                          fallback={({ resendableAfter }: { resendableAfter: number }) => (
                             <Button variant="link" size="sm" disabled>
                               Didn&apos;t receive a code? Resend (
                               <span className="tabular-nums">

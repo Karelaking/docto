@@ -16,7 +16,7 @@ import { Icons } from "@/components/ui/icons";
 
 export default function SignInPage() {
   return (
-    <div className="grid w-full grow items-center px-4 sm:justify-center">
+    <div className="grid w-full h-screen grow items-center px-4 justify-center">
       <SignIn.Root>
         <Clerk.Loading>
           {(isGlobalLoading) => (
@@ -31,7 +31,7 @@ export default function SignInPage() {
                   </CardHeader>
                   <CardContent className="grid gap-y-4">
                     <div className="grid grid-cols-2 gap-x-4">
-                      <Clerk.Connection name="facebook" asChild>
+                      <Clerk.Connection name="apple" asChild>
                         <Button
                           size="sm"
                           variant="outline"
@@ -246,7 +246,7 @@ export default function SignInPage() {
                             asChild
                             resend
                             className="text-muted-foreground"
-                            fallback={({ resendableAfter }) => (
+                            fallback={({ resendableAfter }: { resendableAfter: number }) => (
                               <Button variant="link" size="sm" disabled>
                                 Didn&apos;t receive a code? Resend (
                                 <span className="tabular-nums">
