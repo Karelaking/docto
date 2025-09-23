@@ -9,7 +9,7 @@ const AutoPlayCarousel = () => {
   return (
     <div className="w-full h-[50vh] flex items-center justify-center rounded-lg">
       <Carousel
-        className="w-full max-w-6xl mx-auto rounded-lg"
+        className="w-full max-w-7xl mx-auto rounded-lg"
         opts={{
           loop: true,
           align: "start",
