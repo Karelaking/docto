@@ -24,7 +24,9 @@ export default function SignInPage() {
               <SignIn.Step name="start">
                 <Card className="w-full sm:w-96">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-center ">Sign in to Fasal</CardTitle>
+                    <CardTitle className="text-2xl text-center ">
+                      Sign in to Fasal
+                    </CardTitle>
                     <CardDescription className="text-center">
                       Welcome back! Please sign in to continue
                     </CardDescription>
@@ -246,7 +248,11 @@ export default function SignInPage() {
                             asChild
                             resend
                             className="text-muted-foreground"
-                            fallback={({ resendableAfter }: { resendableAfter: number }) => (
+                            fallback={({
+                              resendableAfter,
+                            }: {
+                              resendableAfter: number;
+                            }) => (
                               <Button variant="link" size="sm" disabled>
                                 Didn&apos;t receive a code? Resend (
                                 <span className="tabular-nums">

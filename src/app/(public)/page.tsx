@@ -6,6 +6,7 @@ import AutoPlayCarousel from "@/components/autoplay-carousel";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRouter } from "next/navigation";
 
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {
@@ -20,6 +21,8 @@ export default function Home() {
   const testimonialsRef = useRef(null);
   const ctaRef = useRef(null);
   const faqRef = useRef(null);
+
+  const router = useRouter();
 
   useEffect(() => {
     // Hero section animation
@@ -443,7 +446,9 @@ export default function Home() {
             with our platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold animated-button">
+            <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold animated-button" onClick={() => {
+              router.push("/services/crops")
+            }}>
               Start Free Trial
             </Button>
             <Button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-3 text-lg font-semibold animated-button">

@@ -1,3 +1,5 @@
+'use client'
+
 // pages/custom-profile.jsx or app/custom-profile/page.jsx
 import { useUser } from "@clerk/nextjs";
 import { useState } from "react";

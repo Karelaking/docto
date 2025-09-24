@@ -1,5 +1,5 @@
 declare module 'clsx' {
-  type ClassValue = 
+  type ClassValue =
     | ClassArray
     | ClassDictionary
     | string
@@ -8,7 +8,7 @@ declare module 'clsx' {
     | boolean
     | undefined;
 
-  type ClassDictionary = Record<string, any>;
+  type ClassDictionary = Record<string, _>;
   type ClassArray = ClassValue[];
 
   function clsx(...inputs: ClassValue[]): string;

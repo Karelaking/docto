@@ -99,19 +99,11 @@ export default function CropPredictionDashboard() {
   const [date, setDate] = useState<Date | undefined>(new Date());
   const [predictions, setPredictions] = useState(cropData);
 
-  const handlePredict = () => {
-    // Simulate prediction logic
-    const updatedPredictions = cropData
-      .map((crop) => ({
-        ...crop,
-        suitability: Math.min(
-          95,
-          Math.max(60, crop.suitability + Math.random() * 10 - 5)
-        ),
-      }))
-      .sort((a, b) => b.suitability - a.suitability);
-
-    setPredictions(updatedPredictions);
+  const handleClick = async () => {
+    await fetch("/api/crops") // Changed from 'api/crops' to '/api/predict'
+      .then((response) => response.json())
+      .then((data) => setPredictions(data.message)) // Also fixed: use data.message
+      .catch((error) => console.error("Error fetching data:", error));
   };
 
   const getSuitabilityColor = (score: number) => {
@@ -335,7 +327,7 @@ export default function CropPredictionDashboard() {
               </CardContent>
             </Card>
 
-            <Button onClick={handlePredict} className="w-full" size="lg">
+            <Button onClick={handleClick} className="w-full" size="lg">
               Predict Best Crops
             </Button>
           </div>
