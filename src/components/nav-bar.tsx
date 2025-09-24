@@ -20,11 +20,12 @@ import {
 } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardTitle } from "./ui/card";
+import Logo from "./Logo";
 
 export function NavBar() {
   return (
-    <nav className="w-full flex items-center justify-between py-5">
-      <div className="text-2xl font-bold">FASAL</div>
+    <nav className="w-full flex items-center justify-between py-5 shadow-lg">
+      <div className="text-2xl font-bold"><Logo/></div>
       <div>
         <NavigationMenu>
           <NavigationMenuList className="flex space-x-12">

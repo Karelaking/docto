@@ -69,7 +69,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-gradient-to-br from-green-50 to-blue-50 py-12 px-4">
+    <section className="w-full min-h-screen bg-white py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

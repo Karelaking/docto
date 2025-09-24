@@ -97,7 +97,7 @@ export default function CropPredictionDashboard() {
   const [rainfall, setRainfall] = useState([1200]);
   const [temperature, setTemperature] = useState([28]);
   const [date, setDate] = useState<Date | undefined>(new Date());
-  const [predictions, setPredictions] = useState<any[]>(cropData);
+  const [predictions, setPredictions] = useState(cropData);
 
   const handlePredict = () => {
     // Simulate prediction logic
@@ -134,7 +134,7 @@ export default function CropPredictionDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-4">
+    <div className="min-h-screen bg-white p-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">

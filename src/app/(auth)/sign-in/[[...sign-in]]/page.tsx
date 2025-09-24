@@ -24,7 +24,7 @@ export default function SignInPage() {
               <SignIn.Step name="start">
                 <Card className="w-full sm:w-96">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-center ">Sign in to Docto</CardTitle>
+                    <CardTitle className="text-2xl text-center ">Sign in to Fasal</CardTitle>
                     <CardDescription className="text-center">
                       Welcome back! Please sign in to continue
                     </CardDescription>
