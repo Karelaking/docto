@@ -5,6 +5,8 @@ import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
+const images: string[] = ["/img/image.png", "/img/image1.jpg"];
+
 const AutoPlayCarousel = () => {
   return (
     <div className="w-full h-[50vh] flex items-center justify-center rounded-lg">
@@ -22,11 +24,11 @@ const AutoPlayCarousel = () => {
         ]}
       >
         <CarouselContent className="h-[50vh] rounded-lg">
-          {Array.from({ length: 5 }).map((_, index) => (
+          {images.map((items, index) => (
             <CarouselItem key={index} className="relative h-[50vh] rounded-lg">
               <div className="relative w-full h-full rounded-lg">
                 <Image
-                  src={"/img/image.png"}
+                  src={items}
                   fill
                   sizes="50vw"
                   className="object-cover rounded-lg"

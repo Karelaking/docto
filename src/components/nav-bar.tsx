@@ -24,7 +24,7 @@ import { Card, CardContent, CardTitle } from "./ui/card";
 export function NavBar() {
   return (
     <nav className="w-full flex items-center justify-between py-5">
-      <div>DOCTO</div>
+      <div className="text-2xl font-bold">FASAL</div>
       <div>
         <NavigationMenu>
           <NavigationMenuList className="flex space-x-12">
@@ -37,23 +37,14 @@ export function NavBar() {
               </NavigationMenuLink>
             </NavigationMenuItem>
             {/* Home Menu End */}
-            {/* About Menu */}
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link href="/about" className="text-xl font-semibold">
-                  About
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            {/* About Menu End */}
             {/* Services Menu */}
             <NavigationMenuItem className="">
               <NavigationMenuTrigger className="text-xl font-semibold">
                 Services
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="flex p-3 w-max h-max space-x-3">
+              <NavigationMenuContent className="flex p-3 w-max h-max space-y-3 flex-col">
                 {/* items start*/}
-                <Card className="min-w-sm text-center p-4 aspect-video flex flex-col items-center justify-around">
+                <Card className="min-w-sm w-full text-center p-4 aspect-video flex flex-col items-center justify-around">
                   <Link href="/services/crops">
                     <CardTitle className="my-3 text-2xl font-semibold">
                       Crop
@@ -69,7 +60,7 @@ export function NavBar() {
                 <Card className="min-w-sm text-center p-4 aspect-video flex flex-col items-center justify-around">
                   <Link href="/services/">
                     <CardTitle className="my-3 text-2xl font-semibold">
-                      Pestisites
+                      Pesticides
                     </CardTitle>
                     <CardContent className="flex items-center justify-center">
                       <span className="text-sm">
