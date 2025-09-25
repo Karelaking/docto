@@ -21,11 +21,14 @@ import {
 import { Button } from "./ui/button";
 import { Card, CardContent, CardTitle } from "./ui/card";
 import Logo from "./Logo";
+import { Badge } from "./ui/badge";
 
 export function NavBar() {
   return (
-    <nav className="w-full flex items-center justify-between py-5 shadow-lg">
-      <div className="text-2xl font-bold"><Logo/></div>
+    <nav className="min-w-full flex items-center justify-between py-4">
+      <div className="text-2xl font-bold">
+        <Logo />
+      </div>
       <div>
         <NavigationMenu>
           <NavigationMenuList className="flex space-x-12">
@@ -52,8 +55,7 @@ export function NavBar() {
                     </CardTitle>
                     <CardContent className="flex items-center justify-center">
                       <span className="text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo, fugit!
+                        Explore smart algorithums powering crop prefictions
                       </span>
                     </CardContent>
                   </Link>
@@ -61,12 +63,11 @@ export function NavBar() {
                 <Card className="min-w-sm text-center p-4 aspect-video flex flex-col items-center justify-around">
                   <Link href="/services/">
                     <CardTitle className="my-3 text-2xl font-semibold">
-                      Pesticides
+                      Pesticides <Badge className="bg-green-500">Comming soon</Badge>
                     </CardTitle>
                     <CardContent className="flex items-center justify-center">
                       <span className="text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Explicabo, fugit!
+                        Get crop-specific pesticide recommendations
                       </span>
                     </CardContent>
                   </Link>
@@ -89,9 +90,11 @@ export function NavBar() {
       </div>
       <div className="flex w-max space-x-3">
         <SignedOut>
-          <SignInButton />
+          <SignInButton>
+            <Button variant="ghost" className="rounded-2xl cursor-pointer">Sign In</Button>
+          </SignInButton>
           <SignUpButton>
-            <Button className="rounded-2xl">Sign Up</Button>
+            <Button className="rounded-2xl cursor-pointer">Sign Up</Button>
           </SignUpButton>
         </SignedOut>
         <SignedIn>

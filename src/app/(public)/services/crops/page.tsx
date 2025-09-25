@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { cropData } from "@/data/crop";
 import {
   Select,
   SelectContent,
@@ -39,42 +40,7 @@ import {
 } from "lucide-react";
 import { format } from "date-fns";
 
-// Mock data for crop recommendations
-const cropData = [
-  {
-    id: 1,
-    name: "Wheat",
-    suitability: 95,
-    season: "Rabi",
-    yield: "4.5 tons/ha",
-    water: "Medium",
-    profit: "₹45,000/ha",
-    risk: "Low",
-    description: "Ideal for your soil conditions and current season",
-  },
-  {
-    id: 2,
-    name: "Rice",
-    suitability: 78,
-    season: "Kharif",
-    yield: "5.2 tons/ha",
-    water: "High",
-    profit: "₹52,000/ha",
-    risk: "Medium",
-    description: "Good match but requires more water resources",
-  },
-  {
-    id: 3,
-    name: "Cotton",
-    suitability: 85,
-    season: "Kharif",
-    yield: "2.8 tons/ha",
-    water: "Medium",
-    profit: "₹68,000/ha",
-    risk: "Medium",
-    description: "High profit potential with moderate risk",
-  },
-];
+
 
 const soilTypes = [
   "Alluvial",
@@ -127,7 +93,7 @@ export default function CropPredictionDashboard() {
 
   return (
     <div className="min-h-screen bg-white p-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900">

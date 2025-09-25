@@ -7,7 +7,7 @@ const layout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="min-w-full lg:min-h-screen flex items-center flex-col overflow-auto no-scrollbar">
+    <div className="min-w-full lg:min-h-screen overflow-auto no-scrollbar">
       <NavBar />
       <div className="min-w-7xl">{children}</div>
     </div>

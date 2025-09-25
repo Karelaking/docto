@@ -257,7 +257,7 @@ export default function Home() {
       {/* Features Section */}
       <section
         ref={featuresRef}
-        className="w-full min-h-screen bg-gradient-to-br from-green-50 to-blue-50"
+        className="w-full min-h-screen bg-gradient-to-br from-green-50 to-blue-50 rounded-xl"
       >
         <div className="container mx-auto px-4 py-16">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -330,7 +330,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animated-button">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animated-button" onClick={() => {
+                router.push("/services/crops");
+              }}>
                 Learn More
               </Button>
             </div>
